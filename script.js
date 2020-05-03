@@ -34,26 +34,25 @@
 
 
 
-const div = document.querySelector('div');
+  const div = document.querySelector('div');
 
-const createMovies = (moviesArray) => {
+  const createMovies = (moviesArray) => {
   console.log(moviesArray);
   const ul = document.querySelector('ul');
 
-  moviesArray.forEach(movie => {
+moviesArray.forEach(movie => {
     // create li
     const li = document.createElement('li')
-    li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
+li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
 
-    // img if  Poster
+    // img if Poster
     if(movie.Poster !== 'N/A') {
-      const img = document.createElement('img');
+    const img = document.createElement('img');
       img.setAttribute('src', movie.Poster);      
       
       // img to li
       li.insertAdjacentElement('beforeend', img);
     }
-
 
     // li to ul
     ul.insertAdjacentElement('beforeend', li);
