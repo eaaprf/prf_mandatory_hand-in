@@ -18,12 +18,12 @@ success.onload = function () {
         var li = document.createElement('li')
                 li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
 
-                // create img only if movie has Poster
+                // create img only if Poster
                 if (movie.Poster !== 'N/A') {
         var img = document.createElement('img');
                     img.setAttribute('src', movie.Poster);
 
-                    // insert img into li
+                    // insert img to li
                     li.insertAdjacentElement('beforeend', img);
                 }
 
