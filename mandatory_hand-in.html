@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>OMDB MANDATORY</title>
+    <meta charset="UTF-8">
+    <title>OMDB MANDATORY</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
-    <body>
-        
-    <div id="root"></div>
-        
-  <ul>
+
+<body>
+
     
-  </ul>
+    
+    <ul>
+    </ul>
+
+  <p id="movie"></p>
+    <script src="script.js"></script>
+
+<!--
+    <script>
+        window.onload = function() {
+            $.getJSON("http://www.omdbapi.com/?s=tt0078748&apikey=728657e2", fetch);
+        }
+
+        const result = document.createElement('div');
+
+        function fetch(movies) {
+            var result = "";
+            $.each(movies, function(key, value) {
+                result += "<strong>" + key + "</strong> : </p>" + value + "</p>";
+
+            });
+
+            $('#movie').html(result);
+        }
+
+    </script>
+-->
+    
+<script      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   
-  <script src="script.js"></script>
 </body>
+
 </html>
