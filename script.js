@@ -34,8 +34,6 @@
 
 
 
-  
-// target the input & form
 const div = document.querySelector('div');
 
 const createMovies = (moviesArray) => {
