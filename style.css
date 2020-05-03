@@ -1,0 +1,32 @@
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img{
+    margin: 1rem;
+    border: 1px solid gray;
+    height: 295px;
+    width: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+@media screen and (min-width: 600px) {
+    img {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    img {
+        flex: 1 1 calc(33% - 2rem);
+    }
+}
