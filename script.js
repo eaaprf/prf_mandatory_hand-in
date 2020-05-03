@@ -3,39 +3,39 @@ fetch('http://www.omdbapi.com/?s=alien&apikey=728657e2')
     .then((success) => success.json())
     .then((movies) => {
         console.log(createMovies)
-});
-        success.onload = function () {
-            var success = request.success;
-            var createMovies = JSON.parse(response);
+    });
+success.onload = function () {
+        var success = request.success;
+        var createMovies = JSON.parse(response);
 
 
-            const createMovies = (moviesArray) => {
-  console.log(moviesArray);
-  const ul = document.querySelector('ul');
+        var createMovies = (moviesArray) => {
+            console.log(moviesArray);
+            var ul = document.querySelector('ul');
 
-  // clear ul everytime
-  ul.innerText = ''
+            // clear ul everytime
+            ul.innerText = ''
 
-  moviesArray.forEach(movie => {
-    // create li
-    const li = document.createElement('li')
-    li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
+            moviesArray.forEach(movie => {
+                // create li
+                var li = document.createElement('li')
+                li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
 
-    // create img only if movie has Poster
-    if(movie.Poster !== 'N/A') {
-      const img = document.createElement('img');
-      img.setAttribute('src', movie.Poster);      
-      
-      // insert img into li
-      li.insertAdjacentElement('beforeend', img);
-    }
+                // create img only if movie has Poster
+                if (movie.Poster !== 'N/A') {
+                    var img = document.createElement('img');
+                    img.setAttribute('src', movie.Poster);
+
+                    // insert img into li
+                    li.insertAdjacentElement('beforeend', img);
+                }
 
 
-    // insert li to ul
-    ul.insertAdjacentElement('beforeend', li);
-  })
-}
-        
+                // insert li to ul
+                ul.insertAdjacentElement('beforeend', li);
+            })
+        }
+
     }
 
     .catch((err) => {
