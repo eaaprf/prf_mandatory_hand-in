@@ -33,6 +33,22 @@
 //    });
 
 
+window.onload=function()
+    {
+	  $.getJSON("http://www.omdbapi.com/?i=tt0094631&apikey=728657e2",get);
+}
+        
+var result = document.createElement('div');
+   function get(movies){      
+	   var result="";
+       $.each(movies,function(key,value){
+          result+="<strong>"+ key + "</strong> : </p>" + value +"</p><hr />"; 
+          		 
+       }); 
+	   
+	   $('#movie').html(result);
+   }		
+
 
 const callApi = (url) => {
   fetch(url)
