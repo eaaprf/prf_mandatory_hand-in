@@ -34,6 +34,7 @@
 
 
 
+  
 // target the input & form
 const div = document.querySelector('div');
 
@@ -41,25 +42,22 @@ const createMovies = (moviesArray) => {
   console.log(moviesArray);
   const ul = document.querySelector('ul');
 
-  // clear ul everytime
-  ul.innerText = ''
-
   moviesArray.forEach(movie => {
     // create li
     const li = document.createElement('li')
     li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
 
-    // create img only if movie has Poster
+    // img if  Poster
     if(movie.Poster !== 'N/A') {
       const img = document.createElement('img');
       img.setAttribute('src', movie.Poster);      
       
-      // insert img into li
+      // img to li
       li.insertAdjacentElement('beforeend', img);
     }
 
 
-    // insert li to ul
+    // li to ul
     ul.insertAdjacentElement('beforeend', li);
   })
 }
@@ -72,11 +70,7 @@ const callApi = (url) => {
     })
 }
 
-
   const url = `https://www.omdbapi.com/?s=alien&apikey=728657e2`
 
   // call the api
   callApi(url);
-
-
-form.addEventListener('submit', onSubmit);
