@@ -1,37 +1,32 @@
-        var success = new XMLHttpRequest();
+var success = new XMLHttpRequest();
 fetch('http://www.omdbapi.com/?s=alien&apikey=728657e2')
-        .then((success) => success.json())
-        .then((movies) => {
-        console.log(createMovies)
-    });
+    .then((success) => success.json())
+    .then((movies) => {
+        console.log(movies)
 
-success.onload = function () {
-        var success = request.success;
-        var createMovies = JSON.parse(response);
-        
-        var createMovies = (moviesArray) => {
-        console.log(moviesArray);
-        var ul = document.querySelector('ul');
+        success.onload = function () {
+            var success = request.success;
+            var movies = JSON.parse(response);
 
-            moviesArray.forEach(movie => {
-                // create li
-        var li = document.createElement('li')
-                li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
 
-                // create img only if Poster
-                if (movie.Poster !== 'N/A') {
-        var img = document.createElement('img');
-                    img.setAttribute('src', movie.Poster);
+            for (item in movies) {
 
-                    // insert img to li
-                    li.insertAdjacentElement('beforeend', img);
-                }
+                //Display all the product names
+                var title = movies[0].Title;
+                var film = document.createElement('li');
+                products.innerHTML = title;
+                document.body.appendChild(film);
 
-                // insert li to ul
-                ul.insertAdjacentElement('beforeend', li);
-            })
+
+                // Display all the product images
+                var imageUrl = movies[0].Poster;
+                var images = document.createElement('img');
+                images.setAttribute('src', imageUrl);
+                document.body.appendChild(images);
+
+            }
         }
-    }
+    })
 
     .catch((err) => {
         console.log(err)
