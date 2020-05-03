@@ -7,8 +7,6 @@ fetch('http://www.omdbapi.com/?s=alien&apikey=728657e2')
         success.onload = function () {
             var success = request.success;
             var movies = JSON.parse(response);
-            console.log(movies);
-
 
             for (item in movies) {
 
