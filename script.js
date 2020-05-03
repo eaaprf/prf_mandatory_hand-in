@@ -46,24 +46,26 @@ const callApi = (url) => {
 
 const url = `https://www.omdbapi.com/?s=alien&apikey=728657e2`
 
-  // call the api
+    // call the api
   callApi(url);
 
 const createMovies = (moviesArray) => {
   console.log(moviesArray);
 const ul = document.querySelector('ul');
 
-moviesArray.forEach(movie => {
+    moviesArray.forEach(movie => {
     // create li
 const li = document.createElement('li')
-li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
+    li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
 
     // img if Poster
-    if(movie.Poster !== 'N/A') {
-const img = document.createElement('img');
+if(movie.Poster !== 'N/A') {
+  
+    // create img
+  const img = document.createElement('img');
       img.setAttribute('src', movie.Poster);      
       
-      // img to li
+    // img to li
       li.insertAdjacentElement('beforeend', img);
     }
 
