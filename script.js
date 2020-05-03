@@ -51,9 +51,11 @@ const url = `https://www.omdbapi.com/?s=alien&apikey=728657e2`
 
 const createMovies = (moviesArray) => {
   console.log(moviesArray);
+  
 const ul = document.querySelector('ul');
 
     moviesArray.forEach(movie => {
+      
     // create li
 const li = document.createElement('li')
     li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
