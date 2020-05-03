@@ -34,20 +34,33 @@
 
 
 
-  const div = document.querySelector('div');
+const div = document.querySelector('div');
 
-  const createMovies = (moviesArray) => {
+const callApi = (url) => {
+  fetch(url)
+    .then(response => response.json())
+    .then(movies => {
+      createMovies(movies.Search);
+    })
+}
+
+const url = `https://www.omdbapi.com/?s=alien&apikey=728657e2`
+
+  // call the api
+  callApi(url);
+
+const createMovies = (moviesArray) => {
   console.log(moviesArray);
-  const ul = document.querySelector('ul');
+const ul = document.querySelector('ul');
 
 moviesArray.forEach(movie => {
     // create li
-    const li = document.createElement('li')
+const li = document.createElement('li')
 li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
 
     // img if Poster
     if(movie.Poster !== 'N/A') {
-    const img = document.createElement('img');
+const img = document.createElement('img');
       img.setAttribute('src', movie.Poster);      
       
       // img to li
@@ -58,16 +71,3 @@ li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
     ul.insertAdjacentElement('beforeend', li);
   })
 }
-
-const callApi = (url) => {
-  fetch(url)
-    .then(response => response.json())
-    .then(movies => {
-      createMovies(movies.Search);
-    })
-}
-
-  const url = `https://www.omdbapi.com/?s=alien&apikey=728657e2`
-
-  // call the api
-  callApi(url);
