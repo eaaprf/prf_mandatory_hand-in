@@ -1,3 +1,14 @@
+p {
+    max-width: 250px;
+    overflow: hidden;
+    margin: 0 0 0 60px;
+}
+
+h3 {
+    font-weight: 100;
+    margin-left: 20px;
+}
+
 #root {
     max-width: 1200px;
     margin: 0 auto;
@@ -6,27 +17,18 @@
 ul {
     display: flex;
     flex-wrap: wrap;
-}
-
-img{
-    margin: 1rem;
-    border: 1px solid gray;
-    height: 295px;
-    width: auto;
-}
-
-ul {
     list-style: none;
 }
 
-p {
-    max-width: 200px;
-    overflow: hidden;
-    margin-left: 40px;
+img {
+    margin: 1rem;
+    border: 1px solid gray;
+    height: 380px;
+    width: auto;
 }
 
 hr {
-    width: 200px;
+    width: 250px;
     margin-inline-start: 0;
 }
 
