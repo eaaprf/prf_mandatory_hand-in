@@ -72,7 +72,7 @@ const ul = document.querySelector('ul');
       
     // create li
 const li = document.createElement('li')
-    li.innerHTML = `<h3>${movie.Title} - ${movie.Year}</h3>`;
+    li.innerHTML = `<h3><strong>Title:</strong>${movie.Title}</br><strong>Production:</strong>${movie.Year}</br><strong>Type:</strong>${movie.Type}</br><strong>Imdbid:</strong>${movie.imdbID}</h3>`;
 
     // img if Poster
 if(movie.Poster !== 'N/A') {
