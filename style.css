@@ -1,30 +1,33 @@
-p {
-    max-width: 250px;
-    overflow: hidden;
-    margin: 0 0 0 60px;
+/*General css*/
+
+body {
+	font-family: Arial;
+	font-size: 13px;
+	background: #f1f1f1;
 }
 
-h3 {
-    font-weight: 100;
-    margin-left: 20px;
-}
-
-#root {
-    max-width: 1200px;
+main {
+    max-width: 995px;
     margin: 0 auto;
 }
 
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+p {
+    overflow: hidden;
 }
 
-img {
-    margin: 1rem;
-    border: 1px solid gray;
-    height: 380px;
-    width: auto;
+h3 {
+	color: red;
+	font-size: 18px;
+    font-weight: 100;
+    margin-left: 20px;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+a {
+    cursor: pointer;
 }
 
 hr {
@@ -32,13 +35,135 @@ hr {
     margin-inline-start: 0;
 }
 
+/*Omdb css*/
+
+ul {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    border: 1px solid gray;
+    height: 380px;
+    width: 257;
+    overflow: hidden;
+    margin-right: 58px;
+}
+
+.container {
+    height: 47vh;
+    overflow: hidden;
+    margin-bottom: 25px;
+max-width: 1200px;
+}
+
+/*Youtube css*/
+
+     ::selection {
+	background: #000;
+	color: #fff;
+}
+
+#wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 10px auto;
+    
+}
+
+#yt_list {
+	top: 0;
+	right: 0;
+	list-style: none;
+    overflow: hidden;
+}
+
+.item {
+	height: auto;
+	width: 300px;
+	float: left;
+	padding: 15px;
+	margin: 10px;
+}
+
+.item > a > img {
+    width: 257px;
+    height: auto;
+}
+
+.item:hover {
+	box-shadow: 0px rgba(0, 0, 0, 0.3);
+}
+
+.video-details {
+	font-size: 18px;
+}
+
+div#channel_input > input#user_name.error {
+	color: #d33;
+	border-color: #d33;
+	text-decoration: line-through;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+div#channel_input > div.info {
+	display: none;
+	width: calc(100% - 2em);
+	font-size: 1em;
+	line-height: 1.2em;
+	background: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	padding: 1em;
+	transition: 225ms;
+}
+
+button#load-more{
+	display: block;
+	margin: .5em auto;
+	pading: .5em;
+	font-size: 1em;
+	outline: none;
+}
+
+.item {
+    border:0;
+    padding: 0;
+    margin: 0;
+    border-left: 0px solid #e9ecef;
+}
+
+.modal-footer {
+    border-top: 0px solid #e9ecef;
+    border-left: 0px solid #e9ecef;
+}
+
+.modal-header {
+    border-bottom: 0px solid #e9ecef;
+    border-left: 0px solid #e9ecef;
+}
+
 @media screen and (min-width: 600px) {
     img {
         flex: 1 1 calc(50% - 2rem);
     }
+    
+    .container {
+    height: 33vh;
+    overflow: hidden;
+    margin-bottom: 25px;
+max-width: 1200px;
+}
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {.container {
+    height: 27vh;
+    overflow: hidden;
+    margin-bottom: 25px;
+max-width: 1200px;
+}
     img {
         flex: 1 1 calc(33% - 2rem);
     }
