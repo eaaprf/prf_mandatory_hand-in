@@ -6,56 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="yt-api-k" value="AIzaSyBrePXS78esLPOtA4MWABYcuSnnd95vMcw" />
-    <title>OMDB MANDATORY</title>
+    <title>API MANDATORY</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
+<!--<link rel="stylesheet" type="text/css" href="grid.css">-->
 
 </head>
-
 <body>
-    <main>
-        <h1>Alien movie search on the internet</h1>
-    <!-- omdb api -->
-    <section>
-        <ul>
-        </ul>
-    </section>
-    <!-- youtube api movie search-->
-    <div class="no-fouc">
-        <div id="yt_list" class="yt_list">
-        </div>
-    </div>
 
-    <!-- youtube api Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <iframe id="root"></iframe>
-                </div>
-                <div class="modal-footer">
+    <main>
+
+        <!--<div class="wrapper">-->
+
+        <!-- Title -->
+
+        <!--<div id="div1" class="threecolumns">-->
+        <h1>Alien movie search on the internet</h1>
+        <!--</div>-->
+
+
+        <!-- omdb api -->
+
+        <!--<div id="div2" class="twocolumns">-->
+        <section>
+            <ul>
+            </ul>
+        </section>
+        <!--</div>-->
+
+        <!-- youtube api movie search-->
+
+        <!--<div id="div4" twocolumns>-->
+        <div class="no-fouc">
+            <div id="yt_list" class="yt_list">
+            </div>
+        </div>
+
+        <!-- youtube api Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe id="root"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-<!-- omdb api movie id -->
-    <section class="container">
+        <!--</div>-->
+
+        <!-- omdb api movie id -->
+
+        <!--<div id="div3" class="tworows">-->
+        <section class="container">
         <p  style="display: flex;flex-direction:row;flex-wrap: wrap" id="movie"></p>
     </section>
-</main>
+
+        <!--</div></div>-->
+
+    </main>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
+
     <script src="script.js"></script>
 
-</body></html>
+</body>
+
+</html>
